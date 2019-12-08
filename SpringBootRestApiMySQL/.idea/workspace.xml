@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e764e740-d534-4bb7-8694-cb253e46054c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rara/spring/restapi/mysql/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rara/spring/restapi/mysql/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rara/spring/restapi/mysql/model/OrderProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rara/spring/restapi/mysql/model/OrderProductPK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-boot-restapi-mysql.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/spring-boot-restapi-mysql.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,12 +113,20 @@
       <option name="project" value="LOCAL" />
       <updated>1575813642347</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deleted OrderProduct.java and OrderProductPK.java&#10;changes to Order.java for final implementation">
+      <created>1575815701392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575815701392</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="deleted OrderController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted OrderController.java" />
+    <MESSAGE value="deleted OrderProduct.java and OrderProductPK.java&#10;changes to Order.java for final implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted OrderProduct.java and OrderProductPK.java&#10;changes to Order.java for final implementation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1575810172063">
@@ -138,38 +141,42 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575804793307" />
-    <state x="504" y="119" key="CommitChangelistDialog2" timestamp="1575813640832">
+    <state x="504" y="119" key="CommitChangelistDialog2" timestamp="1575815699927">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="504" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1575813640832" />
+    <state x="504" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1575815699927" />
     <state x="184" y="87" key="DiffContextDialog" timestamp="1575813624062">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="184" y="87" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575813624062" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1575809454978">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1575815704456">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575411491329" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575809454978" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1575809454978">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575815704456" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1575815704456">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575411491329" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575809454978" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1575809454978">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575815704456" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1575815704456">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575411491329" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575809454978" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1575809454978">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575815704456" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1575815704456">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575411491329" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575809454978" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575815704456" />
     <state x="490" y="179" key="Maven.ArtifactSearchDialog" timestamp="1575810696903">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="490" y="179" key="Maven.ArtifactSearchDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575810696903" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1575815888268">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1575815888268" />
     <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1575802067835">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
