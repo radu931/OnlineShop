@@ -45,7 +45,7 @@ public class Customer {
 		return this.name;
 	}
 
-	public void setAge(int age) {
+	public void setdeleteCustomers(int age) {
 		this.age = age;
 	}
 
