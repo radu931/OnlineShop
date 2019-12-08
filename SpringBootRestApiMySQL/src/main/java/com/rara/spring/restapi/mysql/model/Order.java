@@ -1,5 +1,6 @@
 package com.rara.spring.restapi.mysql.model;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -19,28 +20,22 @@ public class Order {
     @Column(name = "deliveryDate")
     private Date deliveryDate;
 
-    @OneToMany
-    @OnDelete(action =  OnDeleteAction.CASCADE)
-    @JoinColumn(name = "product_id")
+    @OneToMany(fetch = FetchType.EAGER)
+  //  @OnDelete(action =  OnDeleteAction.CASCADE)
     private List<Product> orderProducts = new ArrayList<>();
 
-    @ManyToOne
-    @OnDelete(action =  OnDeleteAction.CASCADE)
-    @JoinColumn(name = "customer_id")
+    @OneToOne(cascade = CascadeType.REMOVE)
     private Customer customer;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private Status status;
 
-    @OneToOne
-    @OnDelete(action =  OnDeleteAction.CASCADE)
-    @JoinColumn(name = "deliveryCompany_id")
+    @OneToOne(cascade = CascadeType.REMOVE)
     private DeliveryCompany deliveryCompany;
 
-    @OneToOne
-    @OnDelete(action =  OnDeleteAction.CASCADE)
-    @JoinColumn(name = "contactPerson_id")
+    @OneToOne(cascade = CascadeType.REMOVE)
+   // @OnDelete(action =  OnDeleteAction.CASCADE)
     private ContactPerson contactPerson;
 
     public Order(){}
@@ -48,7 +43,7 @@ public class Order {
     public Order(Date deliveryDate, List<Product> orderProducts, Customer customer, Status status, DeliveryCompany deliveryCompany,
                  ContactPerson contactPerson) {
         this.deliveryDate = deliveryDate;
-        this.orderProducts = orderProducts;
+        this.orderProducts.addAll(orderProducts);
         this.customer = customer;
         this.status = status;
         this.deliveryCompany = deliveryCompany;
@@ -76,7 +71,8 @@ public class Order {
     }
 
     public void setOrderProducts(List<Product> orderProducts) {
-        this.orderProducts = orderProducts;
+        this.orderProducts.clear();
+        this.orderProducts.addAll(orderProducts);
     }
 
     public Customer getCustomer() {
@@ -110,6 +106,7 @@ public class Order {
     public void setContactPerson(ContactPerson contactPerson) {
         this.contactPerson = contactPerson;
     }
+
 
     @Override
     public String toString() {
