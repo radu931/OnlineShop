@@ -1,0 +1,29 @@
+<h3>Customers</h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">isActive</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers | async; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ customer.name }}</td>
+    <td>{{ customer.age | number }}</td>
+    <td>{{ customer.active | number }}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<div>
+    <ul class="text-center list-inline py-3">
+        <li class="list-inline-item"><a routerLink="add" class="btn btn-info active" role="button" routerLinkActive="active">Add</a></li>
+        <li class="list-inline-item"><a routerLink="findbyage" class="btn btn-info active" role="button" routerLinkActive="active">Search</a></li>
+        <li class="list-inline-item"><a class="btn btn-danger active" role="button" routerLinkActive="active" (click)='deleteCustomers()'>Delete All</a></li>
+      </ul>
+</div>
