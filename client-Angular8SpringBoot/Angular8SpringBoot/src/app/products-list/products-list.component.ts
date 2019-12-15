@@ -19,7 +19,7 @@ export class ProductsListComponent implements OnInit {
     this.reloadData();
   }
 
-  deleteCustomers() {
+  deleteProducts() {
     this.productService.deleteAll()
       .subscribe(
         data => {

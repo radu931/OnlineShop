@@ -12,6 +12,8 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { SearchCustomersComponent } from './search-customers/search-customers.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { SearchProductsComponent } from './search-products/search-products.component';
+import { CreateProductComponent } from './create-product/create-product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductsListComponent } from './products-list/products-list.component';
     CustomerDetailsComponent,
     CustomersListComponent,
     SearchCustomersComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    SearchProductsComponent,
+    CreateProductComponent
   ],
   imports: [
     BrowserModule,
