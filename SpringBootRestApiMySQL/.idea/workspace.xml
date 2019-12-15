@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e764e740-d534-4bb7-8694-cb253e46054c" name="Default Changelist" comment="deleted OrderProduct.java and OrderProductPK.java&#10;changes to Order.java for final implementation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rara/spring/restapi/mysql/service/EcommerceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rara/spring/restapi/mysql/SpringBootRestApiMySqlApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rara/spring/restapi/mysql/SpringBootRestApiMySqlApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rara/spring/restapi/mysql/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rara/spring/restapi/mysql/model/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-Angular8SpringBoot/Angular8SpringBoot/src/app/customers-list/customers-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client-Angular8SpringBoot/Angular8SpringBoot/src/app/customers-list/customers-list.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="e764e740-d534-4bb7-8694-cb253e46054c" name="Default Changelist" comment="deleted OrderProduct.java and OrderProductPK.java&#10;changes to Order.java for final implementation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
