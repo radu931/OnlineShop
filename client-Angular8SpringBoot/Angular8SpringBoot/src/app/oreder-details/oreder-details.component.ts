@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { CustomerService } from '../services/customer.service';
+import { ProductService } from '../services/product.service';
 import { OrderService } from '../services/order.service';
+
 import { Order } from '../models/order';
+import { Customer } from '../models/customer';
+import { Product } from '../models/product';
 
 @Component({
 	selector: 'oreder-details',
@@ -12,8 +17,10 @@ import { Order } from '../models/order';
 export class OrederDetailsComponent implements OnInit {
 
   orders: Observable<Order[]>;
+  customers: Observable<Customer[]>;
+	products: Observable<Product[]>;
 
-  constructor(private orderService: OrderService) { }
+  constructor(private orderService: OrderService, private customerService: CustomerService, private productService: ProductService) { }
 
   ngOnInit() {
     this.reloadData();
@@ -31,6 +38,8 @@ export class OrederDetailsComponent implements OnInit {
 
   reloadData() {
     this.orders = this.orderService.getOrdersList();
+    this.customers = this.customerService.getCustomersList();
+		this.products = this.productService.getProductsList();
   }
 
 }

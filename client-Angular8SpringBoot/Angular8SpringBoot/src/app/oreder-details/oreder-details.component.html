@@ -18,6 +18,21 @@
     <td>{{ order.orderDate | date }}</td>
     <td>{{ order.deliveryDate | date }}</td>
   </tr>
+  <tr>
+    <td>
+      <select  class="selectpicker dropdown mt-4 ml-3" id="type" data-live-search="true">
+        <option *ngFor="let customer of customers | async" [value]="customer.id">{{customer.name}}</option>
+     </select>
+    </td>
+    <td>
+      <select  class="selectpicker dropdown mt-4 ml-3" id="type" data-live-search="true">
+        <option *ngFor="let product of products | async" [value]="product.id">{{product.name}}</option>
+     </select>
+    </td>
+    <td>
+      
+    </td>
+  </tr>
   </tbody>
 </table>
 

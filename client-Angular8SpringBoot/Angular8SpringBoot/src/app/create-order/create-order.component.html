@@ -1,1 +1,7 @@
-<div class="create-order"> Hello CreateOrderComponent! </div>
+<select  class="selectpicker dropdown mt-4 ml-3" id="type" data-live-search="true">
+    <option *ngFor="let customer of customers | async" [value]="customer.id">{{customer.name}}</option>
+ </select>
+
+ <select  class="selectpicker dropdown mt-4 ml-3" id="type" data-live-search="true">
+    <option *ngFor="let product of products | async" [value]="product.id">{{product.name}}</option>
+ </select>
