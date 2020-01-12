@@ -1,0 +1,30 @@
+<h3>Orders</h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Customer</th>
+    <th scope="col">Product</th>
+    <th scope="col">Order Date</th>
+    <th scope="col">Delivery Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let order of orders | async; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ order.customer }}</td>
+    <td>{{ order.product }}</td>
+    <td>{{ order.orderDate | date }}</td>
+    <td>{{ order.deliveryDate | date }}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<div>
+    <ul class="text-center list-inline py-3">
+        <li class="list-inline-item"><a routerLink="add" class="btn btn-info active" role="button" routerLinkActive="active">Add</a></li>
+        <li class="list-inline-item"><a routerLink="findbycustomer" class="btn btn-info active" role="button" routerLinkActive="active">Search</a></li>
+      </ul>
+</div>

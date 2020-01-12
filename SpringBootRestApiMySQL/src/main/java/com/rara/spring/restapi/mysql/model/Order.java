@@ -17,45 +17,42 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
+
+    @Column(name = "customer")
+    private String customer;
+
+    @Column(name = "product")
+    private String product;
+
+    @Column(name = "orderDate")
+    private Date orderDate;
+
     @Column(name = "deliveryDate")
     private Date deliveryDate;
 
-    @OneToMany(fetch = FetchType.EAGER)
-  //  @OnDelete(action =  OnDeleteAction.CASCADE)
-    private List<Product> orderProducts = new ArrayList<>();
+    public String getCustomer() {
+        return customer;
+    }
 
-    @OneToOne(cascade = CascadeType.REMOVE)
-    private Customer customer;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private Status status;
-
-    @OneToOne(cascade = CascadeType.REMOVE)
-    private DeliveryCompany deliveryCompany;
-
-    @OneToOne(cascade = CascadeType.REMOVE)
-   // @OnDelete(action =  OnDeleteAction.CASCADE)
-    private ContactPerson contactPerson;
-
-    public Order(){}
-
-    public Order(Date deliveryDate, List<Product> orderProducts, Customer customer, Status status, DeliveryCompany deliveryCompany,
-                 ContactPerson contactPerson) {
-        this.deliveryDate = deliveryDate;
-        this.orderProducts.addAll(orderProducts);
+    public void setCustomer(String customer) {
         this.customer = customer;
-        this.status = status;
-        this.deliveryCompany = deliveryCompany;
-        this.contactPerson = contactPerson;
     }
 
-    public Long getId() {
-        return id;
+    public String getProduct() {
+        return product;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 
     public Date getDeliveryDate() {
@@ -66,58 +63,17 @@ public class Order {
         this.deliveryDate = deliveryDate;
     }
 
-    public List<Product> getOrderProducts() {
-        return orderProducts;
-    }
+    public Order(){}
 
-    public void setOrderProducts(List<Product> orderProducts) {
-        this.orderProducts.clear();
-        this.orderProducts.addAll(orderProducts);
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
+    public Order(String customer, String product, Date orderDate, Date deliveryDate) {
         this.customer = customer;
+        this.product = product;
+        this.orderDate = orderDate;
+        this.deliveryDate = deliveryDate;
     }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    public DeliveryCompany getDeliveryCompany() {
-        return deliveryCompany;
-    }
-
-    public void setDeliveryCompany(DeliveryCompany deliveryCompany) {
-        this.deliveryCompany = deliveryCompany;
-    }
-
-    public ContactPerson getContactPerson() {
-        return contactPerson;
-    }
-
-    public void setContactPerson(ContactPerson contactPerson) {
-        this.contactPerson = contactPerson;
-    }
-
 
     @Override
     public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", deliveryDate=" + deliveryDate +
-                ", orderProducts=" + orderProducts +
-                ", customer=" + customer +
-                ", status=" + status +
-                ", deliveryCompany=" + deliveryCompany +
-                ", contactPerson=" + contactPerson +
-                '}';
+        return "Order [id=" + id + ", customer=" + customer + " , product=" + product + ", orderDate=" + orderDate +"  , deliveryDate="+ deliveryDate +" ]";
     }
 }

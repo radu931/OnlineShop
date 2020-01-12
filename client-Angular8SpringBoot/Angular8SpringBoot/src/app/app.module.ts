@@ -14,6 +14,10 @@ import { SearchCustomersComponent } from './search-customers/search-customers.co
 import { ProductsListComponent } from './products-list/products-list.component';
 import { SearchProductsComponent } from './search-products/search-products.component';
 import { CreateProductComponent } from './create-product/create-product.component';
+import { OrederDetailsComponent } from './oreder-details/oreder-details.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
+import { SearchOrderComponent } from './search-order/search-order.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { CreateProductComponent } from './create-product/create-product.componen
     SearchCustomersComponent,
     ProductsListComponent,
     SearchProductsComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    OrederDetailsComponent,
+    CreateOrderComponent,
+    SearchOrderComponent
   ],
   imports: [
     BrowserModule,

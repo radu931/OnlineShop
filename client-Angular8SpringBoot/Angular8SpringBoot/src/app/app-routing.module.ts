@@ -8,6 +8,9 @@ import { SearchCustomersComponent } from './search-customers/search-customers.co
 import { ProductsListComponent } from './products-list/products-list.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { SearchProductsComponent } from './search-products/search-products.component';
+import { OrederDetailsComponent } from './oreder-details/oreder-details.component';
+import { SearchOrderComponent } from './search-order/search-order.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'customer', pathMatch: 'full' },
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: 'product', component: ProductsListComponent },
   { path: 'product/add', component: CreateProductComponent },
   { path: 'product/findbyname', component: SearchProductsComponent },
+  { path: 'order', component: OrederDetailsComponent },
+  { path: 'order/add', component: CreateOrderComponent },
+  { path: 'order/findbycustomer', component: SearchOrderComponent },
 ];
 
 @NgModule({
