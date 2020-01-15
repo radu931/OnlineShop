@@ -1,1 +1,33 @@
-<div class="search-order"> Hello SearchOrderComponent! </div>
+<h3>Find Order by Customer Name</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="customerName">Customer Name</label>
+      <input type="text" class="form-control" id="customerName" required [(ngModel)]="customerName" name="customerName">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Customer</th>
+    <th scope="col">Product</th>
+    <th scope="col">Order Date</th>
+    <th scope="col">Delivery Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let order of orders; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ order.customer }}</td>
+    <td>{{ order.product }}</td>
+    <td>{{ order.orderDate | date }}</td>
+    <td>{{ order.deliveryDate | date }}</td>
+  </tr>
+  </tbody>
+</table>

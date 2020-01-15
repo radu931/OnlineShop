@@ -1,7 +1,51 @@
-<select  class="selectpicker dropdown mt-4 ml-3" id="type" data-live-search="true">
-    <option *ngFor="let customer of customers | async" [value]="customer.id">{{customer.name}}</option>
- </select>
+<h3>Create Order</h3>
 
- <select  class="selectpicker dropdown mt-4 ml-3" id="type" data-live-search="true">
-    <option *ngFor="let product of products | async" [value]="product.id">{{product.name}}</option>
- </select>
+ <div [hidden]="submitted">
+   <form (ngSubmit)="onSubmit()">
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Customer</th>
+    <th scope="col">Product</th>
+    <th scope="col">Order Date</th>
+    <th scope="col">Delivery Date</th>
+    <th scope="col">Submit</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <select  class="form-control" id="customer" required [(ngModel)]="order.customer" name="customer" class="selectpicker dropdown" data-live-search="true">
+        <option *ngFor="let customer of customers | async" [ngValue]="customer.name" >{{customer.name}}</option>
+     </select>
+    </td>
+    <td>
+      <select  class="selectpicker dropdown" id="product" required [(ngModel)]="order.product" name="product" data-live-search="true">
+        <option *ngFor="let product of products | async" [ngValue]="product.name">{{product.name}}</option>
+     </select>
+    </td>
+    <td>
+      -
+    </td>
+    <td>
+      -
+    </td>
+    <td>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+</form>
+</div>
+
+<div [hidden]="!submitted">
+   <h4>You submitted successfully!</h4>
+   <button class="btn btn-success" (click)="newOrder()">Add</button>
+ </div>
+
+
+
+

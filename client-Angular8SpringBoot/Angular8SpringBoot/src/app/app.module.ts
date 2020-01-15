@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BsDropdownModule, TabsModule, PaginationModule, ButtonsModule } from 'ngx-bootstrap';
+import { BsDropdownModule, TabsModule, PaginationModule, ButtonsModule, BsDatepickerModule } from 'ngx-bootstrap';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +38,7 @@ import { SearchOrderComponent } from './search-order/search-order.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BsDatepickerModule.forRoot(),
     BsDropdownModule.forRoot()
   ],
   providers: [],
